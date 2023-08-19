@@ -1,4 +1,4 @@
-api-key.*
+secrets.ts
 
 # Logs
 logs
@@ -104,3 +104,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+.idea

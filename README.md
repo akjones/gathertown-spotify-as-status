@@ -1,8 +1,10 @@
-# Gather mod example: set status to Spotify
+# Gather mod: set status to Spotify
 
 a Gather mod which sets your status to your currently playing track on spotify
 
 check out the [websocket API docs](https://gathertown.notion.site/Gather-Websocket-API-bf2d5d4526db412590c3579c36141063) for more!
+
+This one uses outh to grab Spotify session creds so it'll launch a little server to handle the redirection loop.
 
 ## setup
 
@@ -10,15 +12,13 @@ prereq: have NodeJS and npm installed
 
 run `npm install`
 
-put your [Gather API key](https://gather.town/apiKeys), -spaceId, [Spotify API credentials](https://developer.spotify.com/dashboard/applications) and [-tokens](https://developer.spotify.com/console/get-users-currently-playing-track/) in a file named `api-key.js` like so:
+put your [Gather API key](https://gather.town/apiKeys), -spaceId, [Spotify API credentials](https://developer.spotify.com/dashboard/applications) in a file named `secrets.ts` like so:
 
-```js
-export const API_KEY = "your-api-key-here";
-export const SPACE_ID = "gatherSpaceId\\gatherSpaceName";
-export const CLIENT_ID = "your-spotify-client-id";
-export const CLIENT_SECRET = "your-spotify-client-secret";
-export const ACCESS_TOKEN = "your-very-long-spotify-token-here";
-export const REFRESH_TOKEN = "your-very-long-spotify-refresh-token-here";
+```ts
+export const GATHERTOWN_API_KEY = "gathertown-api-key";
+export const GATHERTOWN_SPACE_ID = "gatherSpaceId\\gatherSpaceName";
+export const SPOTIFY_CLIENT_ID = "spotify-client-id";
+export const SPOTIFY_CLIENT_SECRET = "spotify-client-secret";
 ```
 
 ## running

@@ -5,6 +5,7 @@
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
+    "types": ["node", "spotify-api", "express"],
     "lib": ["es2019", "dom"]
   },
   "include": ["./**/*"],
